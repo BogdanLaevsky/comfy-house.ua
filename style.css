@@ -1,0 +1,260 @@
+body {
+    background-color: rgba(91, 34, 25, 1);
+    background-image: url(img/logo.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;  
+    width: 100%;
+}
+
+.nightmode {
+    filter: invert(100%);
+}
+
+.negat {
+    background-image: url(img/view_negat.jpg);
+    filter: invert(100%);
+}
+
+
+
+
+.container {
+    background-color: white;
+    border-radius: 5px;
+    background-image: url(img/view.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 70px;
+    margin-bottom: 25px;
+}
+/* img{
+    filter: invert(0%); 
+} */
+ .article {
+    padding-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+ }
+
+
+.header {
+    height: 100vh;    
+}
+.menu {
+    width: 100%;
+    padding: 40px 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu img{
+    height: 50px;
+    width: 50px;
+    justify-content: left;
+}
+.menu img:hover{
+    filter: invert(50%);
+}
+.menu__icon span:hover{
+    filter: invert(50%);
+}
+
+.menu__icon {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+    justify-content: right;
+}  
+.menu__icon span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+} 
+.menu__icon span:nth-child(1) {
+    top: 0px;
+} 
+.menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
+    top: 13px;
+} 
+.menu__icon span:nth-child(4) {
+    top: 26px;
+} 
+.menu__links-item {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 0 10px;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+} 
+
+.menu.menu_state_open .menu__icon span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+} 
+.menu.menu_state_open .menu__icon span:nth-child(2) {
+    transform: rotate(45deg);
+}
+.menu.menu_state_open  .menu__icon span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+.menu.menu_state_open  .menu__icon span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}  
+.menu.menu_state_open .menu__links {
+    display: inline-block;  
+}  
+.menu__links {
+        position: fixed;
+        display: none;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-top: 52px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        overflow: auto;
+    }
+
+a {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px white, 0 0 1em red;
+}
+
+
+
+.nav {
+    display: block;
+    /* width: calc(100% - 50px);
+    justify-content: flex-end; */
+}
+
+
+
+.text {
+    text-align: center;
+}
+
+.text  a {
+    color: black;    
+}
+
+
+
+.show-grid [class^="col-"] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* background-color: #eee;
+    background-color: rgba(86, 61, 124, .15);
+    border: 1px solid #ddd;
+    border: 1px solid rgba(86, 61, 124, .2); */
+  }
+
+.col-md-4 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.icon_big .col-md-4 img{
+    width: 200px;
+}
+
+.icon_little .col-md-4 img{
+    width: 100px;
+}
+  
+
+
+
+.footer {
+      border-top: 1px solid grey;
+      text-align: start;
+      padding-top: 5px;
+      padding-bottom: 1px;
+      margin-top: 30px;
+  }
+
+.back {
+    background: rgba(91, 34, 25, 1);
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+.back h3{
+    font-size: xx-large;
+  }
+
+.back p{
+    font-weight: bold;
+  }
+  
+.map{
+    overflow: auto;
+    max-width: min-content;
+  }
+
+iframe {
+    width: 100vh;
+    height: 70vh;
+  }
+
+.d-flex{
+    overflow: auto;
+}
+  
+.gallery {
+    display: inline-flex;
+    justify-content: space-between;
+    /* max-height: auto; */
+    overflow: hidden;
+} 
+
+.gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease; 
+    padding: 2px;
+}
+.gallery .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+.gallery > .pics > img {
+    border-radius: 7px;
+}
+
+
+@media screen and (max-width: 720px) {
+    .header {
+        height: 35vh; 
+    }
+    iframe {
+        width: 60vh;
+        height: 60vh;  
+    }
+
+    .menu {
+        padding: 20px;
+    }
+
+}
+    
